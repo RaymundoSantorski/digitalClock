@@ -4,74 +4,94 @@
     background-color: black;
 }
 
+:root{
+    /* --wid: calc((100vw - 180px)/12); */
+    --wid: 50px;
+    --space: 8px;
+    --negSpace: -8px;
+}
 
-.hours{
-    top: calc(25vh - 100px);
+.clock, .hours, .minutes, .seconds{
+    display: flex;
+}
+
+.hours_first, 
+.hours_second, 
+.minutes_first, 
+.minutes_second, 
+.seconds_first, 
+.seconds_second{
+    margin-right: 40px;
     position: relative;
 }
 
+.hours_first, .minutes_first, .seconds_first{
+    left: 16px;
+}
+
+.hours_second, .minutes_second, .seconds_second{   
+    left: 8px;
+}
+
 .element{
-    width: 100px;
+    width: var(--wid);
     height: 0px;
     background: white;
-    border-left: 8px solid black; 
-    border-right: 8px solid black;
-    border-bottom: 8px solid white;  
+    border-left: var(--space) solid black; 
+    border-right: var(--space) solid black;
+    border-bottom: var(--space) solid white;  
     position: relative;
 }
 
 .element::after{
-    width: 100px;
+    width: var(--wid);
     height: 0;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-top: 8px solid white;
+    border-left: var(--space) solid transparent;
+    border-right: var(--space) solid transparent;
+    border-top: var(--space) solid white;
     position: absolute;
     content: "";
-    top: 8px;
-    left: -8px;
+    top: var(--space);
+    left: var(--negSpace);
 }
 
 .one{
-    top: 100px;
-    left: 22px;
+    top: 16px;
 }
-
 
 .two{
     transform-origin: 0%;
     transform: rotate(90deg);
-    left: 20px;
-    top: 102px;
+    top: 16px;
 }
 
 .three{
-    transform-origin: 0%;
-    transform: rotate(90deg);
-    left: 148px;
-    top: 92px;
+    transform-origin: 100%;
+    transform: rotate(-90deg);
+    top: 8px;
 }
 
 .four{
-    top: 202px;
-    left: 22px;
+    top: 66px;
 }
 
 .five{
     transform-origin: 0%;
     transform: rotate(90deg);
-    left: 20px;
-    top: 202px;
+    top: 66px;
 }
 
 .six{
-    transform-origin: 0%;
-    transform: rotate(90deg);
-    left: 148px;
-    top: 192px;
+    transform-origin: 100%;
+    transform: rotate(-90deg);
+    top: 58px;
 }
 
 .seven{
-    top: 302px;
-    left: 22px;
+    top: 116px;
+}
+
+.hide, .hide::after{
+    border-top: var(--space) solid black;
+    border-bottom: var(--space) solid black;
 }

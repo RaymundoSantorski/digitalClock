@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+
+.hours{
+    top: calc(25vh - 100px);
+    position: relative;
+}
+
+.element{
+    width: 100px;
+    height: 0px;
+    background: white;
+    border-left: 8px solid black; 
+    border-right: 8px solid black;
+    border-bottom: 8px solid white;  
+    position: relative;
+}
+
+.element::after{
+    width: 100px;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid white;
+    position: absolute;
+    content: "";
+    top: 8px;
+    left: -8px;
+}
+
+.one{
+    top: 100px;
+    left: 22px;
+}
+
+
+.two{
+    transform-origin: 0%;
+    transform: rotate(90deg);
+    left: 20px;
+    top: 102px;
+}
+
+.three{
+    transform-origin: 0%;
+    transform: rotate(90deg);
+    left: 148px;
+    top: 92px;
+}
+
+.four{
+    top: 202px;
+    left: 22px;
+}
+
+.five{
+    transform-origin: 0%;
+    transform: rotate(90deg);
+    left: 20px;
+    top: 202px;
+}
+
+.six{
+    transform-origin: 0%;
+    transform: rotate(90deg);
+    left: 148px;
+    top: 192px;
+}
+
+.seven{
+    top: 302px;
+    left: 22px;
+}

@@ -11,8 +11,16 @@
     --negSpace: -8px;
 }
 
+
 .clock, .hours, .minutes, .seconds{
     display: flex;
+}
+
+.clock{
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
 }
 
 .hours_first, 
@@ -27,10 +35,12 @@
 
 .hours_first, .minutes_first, .seconds_first{
     left: 16px;
+    top: -100px;
 }
 
 .hours_second, .minutes_second, .seconds_second{   
     left: 8px;
+    top: -100px;
 }
 
 .element{
@@ -92,6 +102,6 @@
 }
 
 .hide, .hide::after{
-    border-top: var(--space) solid black;
-    border-bottom: var(--space) solid black;
+    border-top-color: black;
+    border-bottom-color: black;
 }
